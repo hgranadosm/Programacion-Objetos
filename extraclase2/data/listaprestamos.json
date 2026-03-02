@@ -1,0 +1,29 @@
+[
+	{
+		"idPrestamo": 1,
+		"usuario": "Juan Pérez",
+		"libro": "Cien años de soledad",
+		"fechaPrestamo": "2026-02-20",
+		"fechaDevolucion": "2026-03-01",
+		"estado": "Devuelto",
+		"multa": 0
+	},
+	{
+		"idPrestamo": 2,
+		"usuario": "Ana Gómez",
+		"libro": "El Principito",
+		"fechaPrestamo": "2026-02-25",
+		"fechaDevolucion": "2026-03-05",
+		"estado": "Pendiente",
+		"multa": 0
+	},
+	{
+		"idPrestamo": 3,
+		"usuario": "Carlos Ruiz",
+		"libro": "Don Quijote de la Mancha",
+		"fechaPrestamo": "2026-02-15",
+		"fechaDevolucion": "2026-02-28",
+		"estado": "Atrasado",
+		"multa": 1500
+	}
+]
