@@ -1,0 +1,29 @@
+[
+	{
+		"titulo": "Cien años de soledad",
+		"autor": "Gabriel García Márquez",
+		"editorial": "Sudamericana",
+		"anio": 1967,
+		"categoria": "Novela",
+		"disponible": true,
+		"copias": 3
+	},
+	{
+		"titulo": "El Principito",
+		"autor": "Antoine de Saint-Exupéry",
+		"editorial": "Reynal & Hitchcock",
+		"anio": 1943,
+		"categoria": "Fábula",
+		"disponible": false,
+		"copias": 0
+	},
+	{
+		"titulo": "Don Quijote de la Mancha",
+		"autor": "Miguel de Cervantes",
+		"editorial": "Francisco de Robles",
+		"anio": 1605,
+		"categoria": "Novela",
+		"disponible": true,
+		"copias": 2
+	}
+]

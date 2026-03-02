@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Libros | Biblioteca</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+	<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+	<!-- Menú de navegación -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="../index.html"><i class="fas fa-home"></i> Inicio</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" href="libros.html"><i class="fas fa-book"></i> Libros</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="prestamos.html"><i class="fas fa-handshake"></i> Préstamos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="usuarios.html"><i class="fas fa-user"></i> Usuarios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="bibliotecarios.html"><i class="fas fa-user-tie"></i> Bibliotecarios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="devoluciones.html"><i class="fas fa-undo"></i> Devoluciones</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="mantenimientos.html"><i class="fas fa-cogs"></i> Mantenimientos</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main class="container">
+		<h2 class="mb-4"><i class="fas fa-book"></i> Lista de Libros</h2>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover align-middle" id="tablaLibros">
+				<thead class="table-dark">
+					<tr>
+						<th>Título</th>
+						<th>Autor</th>
+						<th>Editorial</th>
+						<th>Año</th>
+						<th>Categoría</th>
+						<th>Disponible</th>
+						<th>Copias</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Aquí se insertarán los libros con JS -->
+				</tbody>
+			</table>
+		</div>
+	</main>
+
+	<footer class="bg-dark text-white text-center py-3 mt-4">
+		<small>&copy; 2026 Sistema de Gestión de Biblioteca</small>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../js/site.js"></script>
+</body>
+</html>
