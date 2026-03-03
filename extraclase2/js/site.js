@@ -1,6 +1,5 @@
-// Mostrar libros en libros.html
 document.addEventListener('DOMContentLoaded', function () {
-	// Mostrar libros
+
 	const tablaLibros = document.getElementById('tablaLibros');
 	if (tablaLibros) {
 		fetch('../data/listalibros.json')
@@ -11,27 +10,33 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(data => {
 				const tbody = tablaLibros.querySelector('tbody');
 				tbody.innerHTML = '';
-				data.forEach(libro => {
+				data.forEach((libro, idx) => {
 					const fila = document.createElement('tr');
+					let disponible = '';
+					if (libro.disponible === true || libro.disponible === 'Sí' || libro.disponible === 'si') {
+						disponible = '<span class="badge-disponible">Sí</span>';
+					} else {
+						disponible = '<span class="badge-detenido">No</span>';
+					}
 					fila.innerHTML = `
+						<td class="id-cell">${idx + 1}</td>
 						<td>${libro.titulo || ''}</td>
 						<td>${libro.autor || ''}</td>
 						<td>${libro.editorial || ''}</td>
 						<td>${libro.anio || libro.año || ''}</td>
 						<td>${libro.categoria || ''}</td>
-						<td>${libro.disponible ? '<span class="badge bg-success">Sí</span>' : '<span class="badge bg-danger">No</span>'}</td>
-						<td>${libro.copias || ''}</td>
+						<td>${disponible}</td>
+						<td>${libro.copias ?? ''}</td>
 					`;
 					tbody.appendChild(fila);
 				});
 			})
 			.catch(error => {
 				const tbody = tablaLibros.querySelector('tbody');
-				tbody.innerHTML = `<tr><td colspan="7" class="text-danger">Error: ${error.message}</td></tr>`;
+				tbody.innerHTML = `<tr><td colspan="8" class="text-danger">Error: ${error.message}</td></tr>`;
 			});
 	}
 
-	// Mostrar préstamos
 	const tablaPrestamos = document.getElementById('tablaPrestamos');
 	if (tablaPrestamos) {
 		fetch('../data/listaprestamos.json')
@@ -44,14 +49,24 @@ document.addEventListener('DOMContentLoaded', function () {
 				tbody.innerHTML = '';
 				data.forEach(prestamo => {
 					const fila = document.createElement('tr');
+
+					let estadoBadge = '';
+					if (prestamo.estado) {
+					  let clase = 'badge-estado';
+					  if (prestamo.estado === 'Devuelto') clase += ' badge-estado-devuelto';
+					  else if (prestamo.estado === 'Pendiente') clase += ' badge-estado-pendiente';
+					  else if (prestamo.estado === 'Atrasado') clase += ' badge-estado-atrasado';
+					  else if (prestamo.estado === 'Disponible') clase += ' badge-estado-disponible';
+					  estadoBadge = `<span class="${clase}">${prestamo.estado}</span>`;
+					}
 					fila.innerHTML = `
-						<td>${prestamo.idPrestamo || ''}</td>
+						<td class="id-cell">${prestamo.idPrestamo || ''}</td>
 						<td>${prestamo.usuario || ''}</td>
 						<td>${prestamo.libro || ''}</td>
 						<td>${prestamo.fechaPrestamo || ''}</td>
 						<td>${prestamo.fechaDevolucion || ''}</td>
-						<td>${prestamo.estado ? `<span class="badge ${prestamo.estado === 'Devuelto' ? 'bg-success' : prestamo.estado === 'Pendiente' ? 'bg-warning text-dark' : 'bg-danger'}">${prestamo.estado}</span>` : ''}</td>
-						<td>${prestamo.multa ? `<span class="text-danger">₡${prestamo.multa}</span>` : '₡0'}</td>
+						<td>${estadoBadge}</td>
+						<td>${prestamo.multa ? `₡${prestamo.multa}` : '₡0'}</td>
 					`;
 					tbody.appendChild(fila);
 				});
