@@ -1,0 +1,74 @@
+[
+	{
+		"titulo": "Cien años de soledad",
+		"autor": "Gabriel García Márquez",
+		"editorial": "Sudamericana",
+		"anio": 1967,
+		"categoria": "Novela",
+		"disponible": true,
+		"copias": 3
+	},
+	{
+		"titulo": "El Principito",
+		"autor": "Antoine de Saint-Exupéry",
+		"editorial": "Reynal & Hitchcock",
+		"anio": 1943,
+		"categoria": "Fábula",
+		"disponible": false,
+		"copias": 0
+	},
+	{
+		"titulo": "Don Quijote de la Mancha",
+		"autor": "Miguel de Cervantes",
+		"editorial": "Francisco de Robles",
+		"anio": 1605,
+		"categoria": "Novela",
+		"disponible": true,
+		"copias": 2
+	},
+	{
+		"titulo": "Rayuela",
+		"autor": "Julio Cortázar",
+		"editorial": "Sudamericana",
+		"anio": 1963,
+		"categoria": "Novela",
+		"disponible": true,
+		"copias": 4
+	},
+	{
+		"titulo": "La sombra del viento",
+		"autor": "Carlos Ruiz Zafón",
+		"editorial": "Planeta",
+		"anio": 2001,
+		"categoria": "Misterio",
+		"disponible": true,
+		"copias": 5
+	},
+	{
+		"titulo": "It",
+		"autor": "Stephen King",
+		"editorial": "Viking Press",
+		"anio": 1986,
+		"categoria": "Novela",
+		"disponible": false,
+		"copias": 1
+	},
+	{
+		"titulo": "Pedro Páramo",
+		"autor": "Juan Rulfo",
+		"editorial": "Fondo de Cultura",
+		"anio": 1955,
+		"categoria": "Novela",
+		"disponible": true,
+		"copias": 2
+	},
+	{
+		"titulo": "Ficciones",
+		"autor": "Jorge Luis Borges",
+		"editorial": "Editorial Sur",
+		"anio": 1944,
+		"categoria": "Cuentos",
+		"disponible": false,
+		"copias": 0
+	}
+]
