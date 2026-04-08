@@ -63,7 +63,69 @@
       </nav>
     </header>
 
-<main class="container">
+<main class="container my-5">
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="mb-4 titulo1">Gestión de Préstamos</h2>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0"><i class="fa-solid fa-book"></i> Registrar Nuevo Préstamo</h5>
+          </div>
+          <div class="card-body">
+            <form id="formularioPrestamo">
+              <div class="mb-3">
+                <label for="idPrestamo" class="form-label">ID Préstamo</label>
+                <input type="text" class="form-control" id="idPrestamo" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="idUsuario" class="form-label">ID Usuario</label>
+                <input type="text" class="form-control" id="idUsuario" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="idLibro" class="form-label">ID Libro</label>
+                <input type="text" class="form-control" id="idLibro" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="fechaPrestamo" class="form-label">Fecha Préstamo</label>
+                <input type="date" class="form-control" id="fechaPrestamo" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="fechaDevolucion" class="form-label">Fecha Devolución</label>
+                <input type="date" class="form-control" id="fechaDevolucion" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="estado" class="form-label">Estado</label>
+                <select class="form-select" id="estado" required>
+                  <option value="Activo">Activo</option>
+                  <option value="Devuelto">Devuelto</option>
+                  <option value="Atrasado">Atrasado</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="multa" class="form-label">Multa (₡)</label>
+                <input type="number" class="form-control" id="multa" value="0" min="0">
+              </div>
+
+              <button type="submit" class="btn btn-success w-100">
+                <i class="fa-solid fa-save"></i> Registrar Préstamo
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h2 class="mb-4 titulo1">Lista de Préstamos</h2>
     <div class="table-responsive">
       <table class="table table-striped table-hover align-middle" id="tablaPrestamos">
@@ -137,5 +199,6 @@ San José, Costa Rica
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../js/site.js"></script>
+	<script src="../js/prestamos-app.js"></script>
 </body>
 </html>

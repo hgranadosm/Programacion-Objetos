@@ -1,0 +1,102 @@
+[
+  {
+    "id": "U001",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "email": "juan.perez@email.com",
+    "telefono": "8765-4321",
+    "tipo": "Estudiante",
+    "estado": "Activo",
+    "fechaRegistro": "2025-01-15T10:30:00.000Z"
+  },
+  {
+    "id": "U002",
+    "nombre": "María",
+    "apellido": "García",
+    "email": "maria.garcia@email.com",
+    "telefono": "8654-3210",
+    "tipo": "Estudiante",
+    "estado": "Activo",
+    "fechaRegistro": "2025-01-20T14:15:00.000Z"
+  },
+  {
+    "id": "U003",
+    "nombre": "Carlos",
+    "apellido": "Rodríguez",
+    "email": "carlos.rodriguez@email.com",
+    "telefono": "8543-2109",
+    "tipo": "Profesor",
+    "estado": "Activo",
+    "fechaRegistro": "2024-12-01T09:00:00.000Z"
+  },
+  {
+    "id": "U004",
+    "nombre": "Ana",
+    "apellido": "Martínez",
+    "email": "ana.martinez@email.com",
+    "telefono": "8432-1098",
+    "tipo": "Profesor",
+    "estado": "Activo",
+    "fechaRegistro": "2024-11-20T11:45:00.000Z"
+  },
+  {
+    "id": "U005",
+    "nombre": "Luis",
+    "apellido": "González",
+    "email": "luis.gonzalez@email.com",
+    "telefono": "8321-0987",
+    "tipo": "Personal",
+    "estado": "Activo",
+    "fechaRegistro": "2024-10-15T08:30:00.000Z"
+  },
+  {
+    "id": "U006",
+    "nombre": "Sofia",
+    "apellido": "López",
+    "email": "sofia.lopez@email.com",
+    "telefono": "8210-9876",
+    "tipo": "Estudiante",
+    "estado": "Activo",
+    "fechaRegistro": "2025-02-01T13:20:00.000Z"
+  },
+  {
+    "id": "U007",
+    "nombre": "David",
+    "apellido": "Sanchez",
+    "email": "david.sanchez@email.com",
+    "telefono": "8109-8765",
+    "tipo": "Estudiante",
+    "estado": "Inactivo",
+    "fechaRegistro": "2025-01-10T10:00:00.000Z"
+  },
+  {
+    "id": "U008",
+    "nombre": "Laura",
+    "apellido": "Fernández",
+    "email": "laura.fernandez@email.com",
+    "telefono": "8098-7654",
+    "tipo": "Profesor",
+    "estado": "Activo",
+    "fechaRegistro": "2024-09-05T15:30:00.000Z"
+  },
+  {
+    "id": "U009",
+    "nombre": "Miguel",
+    "apellido": "Hernández",
+    "email": "miguel.hernandez@email.com",
+    "telefono": "8987-6543",
+    "tipo": "Personal",
+    "estado": "Activo",
+    "fechaRegistro": "2024-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "U010",
+    "nombre": "Elena",
+    "apellido": "Ruiz",
+    "email": "elena.ruiz@email.com",
+    "telefono": "8876-5432",
+    "tipo": "Estudiante",
+    "estado": "Activo",
+    "fechaRegistro": "2025-02-15T09:45:00.000Z"
+  }
+]
