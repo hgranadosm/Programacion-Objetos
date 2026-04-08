@@ -1,25 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Préstamos | Biblioteca</title>
-	<link rel="icon" href="../assets/img/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Préstamos | Biblioteca</title>
+    <link rel="icon" href="../assets/img/favicon.png" />
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-	<link rel="stylesheet" href="../css/pages.css">
-</head>
-<body>
-
-
-<header class="banner-section espacio position-relative">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/pages.css" />
+  </head>
+  <body>
+    <header class="banner-section espacio position-relative">
       <div class="banner-overlay"></div>
       <nav
         class="navbar navbar-expand-lg navbar-dark position-absolute w-100 top-0 start-0"
       >
         <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="../index.html">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="../index.html"
+          >
             <img
               src="../assets/img/logoclaro.png"
               alt="Logo"
@@ -49,13 +56,17 @@
                 <a class="nav-link" href="./prestamos.html">Préstamos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pages/usuarios.html">Usuarios</a>
+                <a class="nav-link" href="./usuarios.html">Usuarios</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pages/bibliotecarios.html">Bibliotecarios</a>
+                <a class="nav-link" href="pages/bibliotecarios.html"
+                  >Bibliotecarios</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pages/devoluciones.html">Devoluciones</a>
+                <a class="nav-link" href="pages/devoluciones.html"
+                  >Devoluciones</a
+                >
               </li>
             </ul>
           </div>
@@ -63,105 +74,120 @@
       </nav>
     </header>
 
-<main class="container my-5">
-    <div class="row mb-5">
-      <div class="col-12">
-        <h2 class="mb-4 titulo1">Gestión de Préstamos</h2>
-      </div>
-    </div>
+    <main class="container">
+      <div class="row mb-3 justify-content-center">
+        <div class="col-lg-6 p-5">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h5 class="mb-0"><i class="fa-solid fa-book"></i> Registrar Nuevo Préstamo</h5>
+            </div>
+            <div class="card-body">
+              <form id="formularioPrestamo">
+                <div class="row">
+                  <div class="col-12 mb-3">
+                    <label for="idPrestamo" class="form-label">ID Préstamo</label>
+                    <input type="text" class="form-control" id="idPrestamo" required>
+                  </div>
 
-    <div class="row mb-5">
-      <div class="col-lg-6">
-        <div class="card">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0"><i class="fa-solid fa-book"></i> Registrar Nuevo Préstamo</h5>
-          </div>
-          <div class="card-body">
-            <form id="formularioPrestamo">
-              <div class="mb-3">
-                <label for="idPrestamo" class="form-label">ID Préstamo</label>
-                <input type="text" class="form-control" id="idPrestamo" required>
-              </div>
+                  <div class="col-12 mb-3">
+                    <label for="idUsuario" class="form-label">ID Usuario</label>
+                    <input type="text" class="form-control" id="idUsuario" required>
+                  </div>
 
-              <div class="mb-3">
-                <label for="idUsuario" class="form-label">ID Usuario</label>
-                <input type="text" class="form-control" id="idUsuario" required>
-              </div>
+                  <div class="col-12 mb-3">
+                    <label for="idLibro" class="form-label">ID Libro</label>
+                    <input type="text" class="form-control" id="idLibro" required>
+                  </div>
 
-              <div class="mb-3">
-                <label for="idLibro" class="form-label">ID Libro</label>
-                <input type="text" class="form-control" id="idLibro" required>
-              </div>
+                  <div class="col-12 mb-3">
+                    <label for="fechaPrestamo" class="form-label">Fecha Préstamo</label>
+                    <input type="date" class="form-control" id="fechaPrestamo" required>
+                  </div>
 
-              <div class="mb-3">
-                <label for="fechaPrestamo" class="form-label">Fecha Préstamo</label>
-                <input type="date" class="form-control" id="fechaPrestamo" required>
-              </div>
+                  <div class="col-12 mb-3">
+                    <label for="fechaDevolucion" class="form-label">Fecha Devolución</label>
+                    <input type="date" class="form-control" id="fechaDevolucion" required>
+                  </div>
 
-              <div class="mb-3">
-                <label for="fechaDevolucion" class="form-label">Fecha Devolución</label>
-                <input type="date" class="form-control" id="fechaDevolucion" required>
-              </div>
+                  <div class="col-12 mb-3">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado" required>
+                      <option value="Activo">Activo</option>
+                      <option value="Devuelto">Devuelto</option>
+                      <option value="Atrasado">Atrasado</option>
+                    </select>
+                  </div>
 
-              <div class="mb-3">
-                <label for="estado" class="form-label">Estado</label>
-                <select class="form-select" id="estado" required>
-                  <option value="Activo">Activo</option>
-                  <option value="Devuelto">Devuelto</option>
-                  <option value="Atrasado">Atrasado</option>
-                </select>
-              </div>
+                  <div class="col-12 mb-3">
+                    <label for="multa" class="form-label">Multa (₡)</label>
+                    <input type="number" class="form-control" id="multa" value="0" min="0">
+                  </div>
 
-              <div class="mb-3">
-                <label for="multa" class="form-label">Multa (₡)</label>
-                <input type="number" class="form-control" id="multa" value="0" min="0">
-              </div>
-
-              <button type="submit" class="btn btn-success w-100">
-                <i class="fa-solid fa-save"></i> Registrar Préstamo
-              </button>
-            </form>
+                  <div class="col-12 d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-success">
+                      <i class="fa-solid fa-save"></i> Registrar Préstamo
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <h2 class="mb-4 titulo1">Lista de Préstamos</h2>
-    <div class="table-responsive">
-      <table class="table table-striped table-hover align-middle" id="tablaPrestamos">
-        <thead class="table-dark">
-          <tr>
-            <th>ID</th>
-            <th>Usuario</th>
-            <th>Libro</th>
-            <th>Fecha Préstamo</th>
-            <th>Fecha Devolución</th>
-            <th>Estado</th>
-            <th>Multa</th>
-          </tr>
-        </thead>
-        <tbody>
-
-				</tbody>
-      </table>
-    </div>
-  </main>
+      <h2 class="mb-4 titulo1">Lista de Préstamos</h2>
+      <div class="table-responsive">
+        <table
+          class="table table-striped table-hover align-middle"
+          id="tablaPrestamos"
+        >
+          <thead class="table-dark">
+            <tr>
+              <th>ID</th>
+              <th>Usuario</th>
+              <th>Libro</th>
+              <th>Fecha Préstamo</th>
+              <th>Fecha Devolución</th>
+              <th>Estado</th>
+              <th>Multa</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
 
     <footer class="cefi-footer mt-5">
       <div class="container py-5">
         <div class="row align-items-center pt-5 pb-5">
           <div class="col-md-4 mb-4 mb-md-0 text-md-start text-center">
-           
             <ul class="footer-contact-list list-unstyled mb-3">
-              <li><span class="footer-contact-icon"><i class="fa-solid fa-phone"></i></span> (506) 2711-1010</li>
-              <li><span class="footer-contact-icon"><i class="fa-brands fa-whatsapp"></i></span> <a href="https:whatsapp.com" target="_blank">8992-9180</a></li>
-              <li><span class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></span> <a href="mailto:info@bibliotecaatlas.com">info@bibliotecaatlas.com</a></li>
+              <li>
+                <span class="footer-contact-icon"
+                  ><i class="fa-solid fa-phone"></i
+                ></span>
+                (506) 2711-1010
+              </li>
+              <li>
+                <span class="footer-contact-icon"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></span>
+                <a href="https:whatsapp.com" target="_blank">8992-9180</a>
+              </li>
+              <li>
+                <span class="footer-contact-icon"
+                  ><i class="fa-solid fa-envelope"></i
+                ></span>
+                <a href="mailto:info@bibliotecaatlas.com"
+                  >info@bibliotecaatlas.com</a
+                >
+              </li>
             </ul>
-           
+
             <div class="footer-address">
               <span class="fw-bold">Dirección:</span><br />
-              Biblioteca Atlas <br>
-San José, Costa Rica
+              Biblioteca Atlas <br />
+              San José, Costa Rica
             </div>
           </div>
           <div class="col-md-4 mb-4 mb-md-0 text-center">
@@ -174,31 +200,51 @@ San José, Costa Rica
             </ul>
           </div>
           <div class="col-md-4 text-md-end text-center">
-              <div class="footer-social mb-3">
-                <a href="https://www.instagram.com" target="_blank" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com" target="_blank" class="footer-social-icon"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.youtube.com" target="_blank" class="footer-social-icon"><i class="fab fa-youtube"></i></a>
-              </div>
-              <a href="https:whatsapp.com" target="_blank" class="footer-btn btn btn-cefi mb-3"><i class="fa-solid fa-heart me-2"></i> Contáctanos</a>
-              <div class="footer-privacy mt-3">
-                <a href="index.html" target="_blank">Política de Privacidad</a> 
-            
-              </div>
+            <div class="footer-social mb-3">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="footer-social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com"
+                target="_blank"
+                class="footer-social-icon"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                class="footer-social-icon"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+            <a
+              href="https:whatsapp.com"
+              target="_blank"
+              class="footer-btn btn btn-cefi mb-3"
+              ><i class="fa-solid fa-heart me-2"></i> Contáctanos</a
+            >
+            <div class="footer-privacy mt-3">
+              <a href="index.html" target="_blank">Política de Privacidad</a>
+            </div>
           </div>
         </div>
         <hr class="footer-divider my-4" />
         <div class="row">
           <div class="col-12 text-center">
-            <small class="footer-copyright">© Copyright 2026 Biblioteca Atlas Costa Rica. Todos los derechos reservados.</small>
+            <small class="footer-copyright"
+              >© Copyright 2026 Biblioteca Atlas Costa Rica. Todos los derechos
+              reservados.</small
+            >
           </div>
         </div>
       </div>
     </footer>
 
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="../js/site.js"></script>
-	<script src="../js/prestamos-app.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/site.js"></script>
+    <script src="../js/prestamos-app.js"></script>
+  </body>
 </html>

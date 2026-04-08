@@ -1,6 +1,6 @@
 [
 	{
-		"idPrestamo": 1,
+		"id": "1",
 		"usuario": "Juan Pérez",
 		"libro": "Cien años de soledad",
 		"fechaPrestamo": "2026-02-20",
@@ -9,7 +9,7 @@
 		"multa": 0
 	},
 	{
-		"idPrestamo": 2,
+		"id": "2",
 		"usuario": "Ana Gómez",
 		"libro": "El Principito",
 		"fechaPrestamo": "2026-02-25",
@@ -18,17 +18,16 @@
 		"multa": 0
 	},
 	{
-		"idPrestamo": 3,
+		"id": "3",
 		"usuario": "Carlos Ruiz",
 		"libro": "Don Quijote de la Mancha",
 		"fechaPrestamo": "2026-02-15",
 		"fechaDevolucion": "2026-02-28",
 		"estado": "Atrasado",
 		"multa": 1500
-	}
-	,
+	},
 	{
-		"idPrestamo": 4,
+		"id": "4",
 		"usuario": "María Fernández",
 		"libro": "Rayuela",
 		"fechaPrestamo": "2026-02-27",
@@ -37,7 +36,7 @@
 		"multa": 0
 	},
 	{
-		"idPrestamo": 5,
+		"id": "5",
 		"usuario": "Luis Castro",
 		"libro": "La sombra del viento",
 		"fechaPrestamo": "2026-02-10",
@@ -46,7 +45,7 @@
 		"multa": 0
 	},
 	{
-		"idPrestamo": 6,
+		"id": "6",
 		"usuario": "Sofía Vargas",
 		"libro": "Crónica de una muerte anunciada",
 		"fechaPrestamo": "2026-02-01",
@@ -55,7 +54,7 @@
 		"multa": 2000
 	},
 	{
-		"idPrestamo": 7,
+		"id": "7",
 		"usuario": "Pedro Jiménez",
 		"libro": "Pedro Páramo",
 		"fechaPrestamo": "2026-02-18",
@@ -64,7 +63,7 @@
 		"multa": 0
 	},
 	{
-		"idPrestamo": 8,
+		"id": "8",
 		"usuario": "Lucía Herrera",
 		"libro": "Ficciones",
 		"fechaPrestamo": "2026-02-22",

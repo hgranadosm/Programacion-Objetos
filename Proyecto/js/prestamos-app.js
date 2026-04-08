@@ -59,6 +59,8 @@ function cargarPrestamos() {
             estado = '<span class="badge bg-success">Devuelto</span>';
           } else if (prestamo.estado === 'Atrasado') {
             estado = '<span class="badge bg-danger">Atrasado</span>';
+          } else if (prestamo.estado === 'Pendiente') {
+            estado = '<span class="badge bg-secondary">Pendiente</span>';
           }
           fila.innerHTML = `
             <td class="id-cell">${prestamo.id || ''}</td>
