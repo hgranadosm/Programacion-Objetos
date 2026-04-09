@@ -56,7 +56,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-weight: bold;
-    padding: 4rem 0 3rem 0;
+    padding: 3.5rem 0 3.5rem 0;
     color: #30431D;
 }
 
@@ -489,27 +489,27 @@ body {
 
 /* Estilos para el resumen de usuarios */
 .titulo-distribucion {
-    color: #87704f !important;
+    color: #616161 !important;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
 }
 
 .numero-total {
-    color: #A8D5F7;
+    color: #325e80;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .numero-activos {
-    color: #B8E8B0;
+    color: #3c7732;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .numero-inactivos {
-    color: #F0B8B0;
+    color: #9c3d2f;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 0.5rem;
@@ -517,7 +517,7 @@ body {
 
 
 .numero {
-    color: #F0D5B8;
+    color: #7d664d;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 0.5rem;
