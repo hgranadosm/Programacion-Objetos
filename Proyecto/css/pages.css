@@ -414,26 +414,31 @@ body {
 }
 
 .btn-editar {
-    background-color: #4A90E2;
+    background-color: #A8D5F7;
     border: none;
     color: #fff;
     transition: background 0.2s;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
 }
 
 .btn-editar:hover, .btn-editar:focus {
-    background-color: #357ABD;
+    background-color: #7FB8E8;
     color: #fff;
 }
 
 .btn-eliminar {
-    background-color: #E74C3C;
+    background-color: #F0B8B0;
     border: none;
     color: #fff;
     transition: background 0.2s;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
 }
 
 .btn-eliminar:hover, .btn-eliminar:focus {
-    background-color: #C0392B;
+    background-color: #E89898;
     color: #fff;
 }
 
@@ -443,23 +448,23 @@ body {
 }
 
 .table .btn-primary {
-    background-color: #4A90E2 !important;
-    border-color: #4A90E2 !important;
+    background-color: #A8D5F7 !important;
+    border-color: #A8D5F7 !important;
 }
 
 .table .btn-primary:hover, .table .btn-primary:focus {
-    background-color: #357ABD !important;
-    border-color: #357ABD !important;
+    background-color: #7FB8E8 !important;
+    border-color: #7FB8E8 !important;
 }
 
 .table .btn-danger {
-    background-color: #E74C3C !important;
-    border-color: #E74C3C !important;
+    background-color: #F0B8B0 !important;
+    border-color: #F0B8B0 !important;
 }
 
 .table .btn-danger:hover, .table .btn-danger:focus {
-    background-color: #C0392B !important;
-    border-color: #C0392B !important;
+    background-color: #E89898 !important;
+    border-color: #E89898 !important;
 }
 
 .btn-secondary {
@@ -492,21 +497,21 @@ body {
 .numero-total {
     color: #A8D5F7;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .numero-activos {
     color: #B8E8B0;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .numero-inactivos {
     color: #F0B8B0;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
