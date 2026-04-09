@@ -358,9 +358,8 @@ body {
 }
 
 .card-header {
-    background-color: #30431D !important;
-    border-bottom: 2px solid #EED1A4;
-}
+    background-color: #d6c5ad !important;
+    border-bottom: none;}
 
 .card-header h5 {
     color: #fff;
@@ -373,28 +372,28 @@ body {
 }
 
 .form-label {
-    color: #30431D;
+    color: #87704f;
     font-weight: 600;
     margin-bottom: 0.5rem;
     font-size: 1rem;
 }
 
 .form-control, .form-select {
-    border: 1px solid #E5E5E5;
-    color: #30431D;
+    border: 1px solid #d6c5ad;
+    color: #d6c5ad;
     background-color: #fff;
     padding: 0.65rem 1rem;
     font-size: 1rem;
 }
 
 .form-control:focus, .form-select:focus {
-    border-color: #EED1A4;
-    box-shadow: 0 0 0 0.2rem #EED1A41f;
-    color: #30431D;
+    border-color: #d6c5ad;
+    box-shadow: 0 0 0 0.2rem #baa2821f;
+    color: #87704f;
 }
 
 .form-control::placeholder {
-    color: #A9A9A9;
+    color: #d6c5ad;
 }
 
 .btn-success {
@@ -406,6 +405,7 @@ body {
     padding: 0.65rem 1.5rem;
     letter-spacing: 0.5px;
     transition: background 0.3s;
+    min-width: 130px;
 }
 
 .btn-success:hover, .btn-success:focus {
@@ -437,6 +437,11 @@ body {
     color: #fff;
 }
 
+.h6{
+    color: #87704f !important; 
+    font-weight: 600;
+}
+
 .table .btn-primary {
     background-color: #4A90E2 !important;
     border-color: #4A90E2 !important;
@@ -459,12 +464,68 @@ body {
 
 .btn-secondary {
     background-color: #A9A9A9 !important;
-    border-color: #A9A9A9 !important;
     color: #fff !important;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 0.65rem 1.5rem;
+    letter-spacing: 0.5px;
+    transition: background 0.3s;
+    min-width: 130px;
+
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
     background-color: #858585 !important;
     border-color: #858585 !important;
     color: #fff !important;
+}
+
+/* Estilos para el resumen de usuarios */
+.titulo-distribucion {
+    color: #87704f !important;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.numero-total {
+    color: #A8D5F7;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.numero-activos {
+    color: #B8E8B0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.numero-inactivos {
+    color: #F0B8B0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.numero {
+    color: #F0D5B8;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Estilos para los textos */
+.texto-resumen {
+    color: #87704f !important;
+    font-weight: 600;
+}
+
+.texto-tipo {
+    color: #A9A9A9 !important;
+    font-weight: 500;
 }

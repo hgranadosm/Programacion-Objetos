@@ -63,9 +63,8 @@ function inicializarFormulario() {
 
 	btnLimpiar.addEventListener('click', function () {
 		formulario.reset();
-		btnGuardar.textContent = '<i class="fa-solid fa-save"></i> Guardar';
-		btnGuardar.classList.remove('btn-warning');
-		btnGuardar.classList.add('btn-success');
+		btnGuardar.textContent = 'Guardar';
+		document.getElementById('usuarioId').disabled = false;
 	});
 }
 
@@ -115,9 +114,8 @@ function guardarUsuario() {
 	mostrarTablaUsuarios();
 	actualizarResumen();
 	document.getElementById('formularioUsuario').reset();
-	document.getElementById('btnGuardar').textContent = '<i class="fa-solid fa-save"></i> Guardar';
-	document.getElementById('btnGuardar').classList.remove('btn-warning');
-	document.getElementById('btnGuardar').classList.add('btn-success');
+	document.getElementById('btnGuardar').textContent = 'Guardar';
+	document.getElementById('usuarioId').disabled = false;
 }
 
 /**
@@ -143,7 +141,7 @@ function mostrarTablaUsuarios() {
 			<td>${usuario.apellido}</td>
 			<td>${usuario.email}</td>
 			<td>${usuario.telefono || '-'}</td>
-			<td>${usuario.getTipoConIcono()}</td>
+			<td>${usuario.tipo}</td>
 			<td>${usuario.getEstadoBadge()}</td>
 			<td>
 				<button class="btn btn-sm btn-primary btn-editar" data-id="${usuario.id}" title="Editar">
@@ -205,9 +203,7 @@ function editarUsuario(id) {
 
 	// Cambiar botón de guardar a actualizar
 	const btnGuardar = document.getElementById('btnGuardar');
-	btnGuardar.textContent = '<i class="fa-solid fa-refresh"></i> Actualizar';
-	btnGuardar.classList.add('btn-warning');
-	btnGuardar.classList.remove('btn-success');
+	btnGuardar.textContent = 'Actualizar';
 
 	// Desabilitar el campo ID (no se puede cambiar)
 	document.getElementById('usuarioId').disabled = true;
@@ -254,31 +250,44 @@ function actualizarResumen() {
 		tiposUsuarios[u.tipo] = (tiposUsuarios[u.tipo] || 0) + 1;
 	});
 
+	// Mapeo de plurales
+	const plurales = {
+		'Estudiante': 'Estudiantes',
+		'Profesor': 'Profesores',
+		'Personal': 'Personales'
+	};
+
 	let html = `
 		<div class="row text-center">
 			<div class="col-md-4">
-				<h3 class="text-primary">${totalUsuarios}</h3>
-				<p class="text-muted">Total de Usuarios</p>
+				<h3 class="numero-total">${totalUsuarios}</h3>
+				<p class="texto-tipo">Total de Usuarios</p>
 			</div>
 			<div class="col-md-4">
-				<h3 class="text-success">${usuariosActivos}</h3>
-				<p class="text-muted">Usuarios Activos</p>
+				<h3 class="numero-activos">${usuariosActivos}</h3>
+				<p class="texto-tipo">Usuarios Activos</p>
 			</div>
 			<div class="col-md-4">
-				<h3 class="text-danger">${usuariosInactivos}</h3>
-				<p class="text-muted">Usuarios Inactivos</p>
+				<h3 class="numero-inactivos">${usuariosInactivos}</h3>
+				<p class="texto-tipo">Usuarios Inactivos</p>
 			</div>
 		</div>
 		<hr>
 		<div class="mt-3">
-			<h6 class="fw-bold mb-3">Distribución por Tipo</h6>
+			<h6 class="titulo-distribucion fw-bold mb-3">Distribución por Tipo</h6>
 			<div class="row">
-				${Object.entries(tiposUsuarios).map(([tipo, cantidad]) => `
+				${Object.entries(tiposUsuarios).map(([tipo, cantidad]) => {
+					let claseNumero = '';
+					if (tipo === 'Estudiante') claseNumero = 'numero';
+					else if (tipo === 'Profesor') claseNumero = 'numero';
+					else if (tipo === 'Personal') claseNumero = 'numero';
+					return `
 					<div class="col-md-4 text-center">
-						<h5 class="text-secondary">${cantidad}</h5>
-						<small class="text-muted">${tipo}s</small>
+						<h5 class="${claseNumero}">${cantidad}</h5>
+						<small class="texto-tipo">${plurales[tipo] || tipo}</small>
 					</div>
-				`).join('')}
+				`;
+				}).join('')}
 			</div>
 		</div>
 	`;
