@@ -487,7 +487,6 @@ body {
     color: #fff !important;
 }
 
-/* Estilos para el resumen de usuarios */
 .titulo-distribucion {
     color: #616161 !important;
     font-size: 1.1rem;
@@ -523,8 +522,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-
-/* Estilos para los textos */
 .texto-resumen {
     color: #87704f !important;
     font-weight: 600;

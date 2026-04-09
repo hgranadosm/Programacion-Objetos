@@ -1,8 +1,3 @@
-/**
- * Aplicación de Gestión de Usuarios
- * Maneja la interacción entre el formulario y la tabla de usuarios
- */
-
 let usuarios = [];
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -10,15 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	inicializarFormulario();
 });
 
-/**
- * Carga los usuarios desde el archivo JSON
- */
 function cargarUsuarios() {
 	fetch('../data/listausuarios.json')
 		.then(response => {
 			if (!response.ok) {
 				if (response.status === 404) {
-					// Si no existe el archivo, inicializar con array vacío
 					console.log('Archivo de usuarios no existe aún');
 					usuarios = [];
 					mostrarTablaUsuarios();
@@ -48,9 +39,6 @@ function cargarUsuarios() {
 		});
 }
 
-/**
- * Inicializa los eventos del formulario
- */
 function inicializarFormulario() {
 	const formulario = document.getElementById('formularioUsuario');
 	const btnGuardar = document.getElementById('btnGuardar');
@@ -68,9 +56,6 @@ function inicializarFormulario() {
 	});
 }
 
-/**
- * Guarda o actualiza un usuario des del formulario
- */
 function guardarUsuario() {
 	const id = document.getElementById('usuarioId').value.trim();
 	const nombre = document.getElementById('usuarioNombre').value.trim();
@@ -80,21 +65,17 @@ function guardarUsuario() {
 	const tipo = document.getElementById('usuarioTipo').value;
 	const estado = document.getElementById('usuarioEstado').value;
 
-	// Crear nuevo usuario
 	const nuevoUsuario = new Usuario(id, nombre, apellido, email, telefono, tipo, estado);
 
-	// Validar usuario
 	const validacion = nuevoUsuario.validar();
 	if (!validacion.valido) {
 		mostrarAlerta('Error en la validación', validacion.errores.join('<br>'), 'danger');
 		return;
 	}
 
-	// Buscar si el usuario ya existe
 	const usuarioExistente = usuarios.findIndex(u => u.id === id);
 
 	if (usuarioExistente !== -1) {
-		// Actualizar usuario existente
 		usuarios[usuarioExistente].actualizar({
 			nombre: nombre,
 			apellido: apellido,
@@ -105,12 +86,9 @@ function guardarUsuario() {
 		});
 		mostrarAlerta('Éxito', `Usuario "${nuevoUsuario.getNombreCompleto()}" actualizado correctamente.`, 'success');
 	} else {
-		// Agregar nuevo usuario
 		usuarios.push(nuevoUsuario);
 		mostrarAlerta('Éxito', `Usuario "${nuevoUsuario.getNombreCompleto()}" registrado correctamente.`, 'success');
 	}
-
-	// Actualizar tabla y limpiar formulario
 	mostrarTablaUsuarios();
 	actualizarResumen();
 	document.getElementById('formularioUsuario').reset();
@@ -118,9 +96,6 @@ function guardarUsuario() {
 	document.getElementById('usuarioId').disabled = false;
 }
 
-/**
- * Muestra la tabla de usuarios
- */
 function mostrarTablaUsuarios() {
 	const tablaUsuarios = document.getElementById('tablaUsuarios');
 	if (!tablaUsuarios) return;
@@ -155,15 +130,10 @@ function mostrarTablaUsuarios() {
 		tbody.appendChild(fila);
 	});
 
-	// Agregar eventos a los botones
 	agregarEventosBotones();
 }
 
-/**
- * Agrega eventos a los botones de editar y eliminar
- */
 function agregarEventosBotones() {
-	// Botones de editar
 	document.querySelectorAll('.btn-editar').forEach(btn => {
 		btn.addEventListener('click', function () {
 			const id = this.getAttribute('data-id');
@@ -171,7 +141,6 @@ function agregarEventosBotones() {
 		});
 	});
 
-	// Botones de eliminar
 	document.querySelectorAll('.btn-eliminar').forEach(btn => {
 		btn.addEventListener('click', function () {
 			const id = this.getAttribute('data-id');
@@ -180,10 +149,6 @@ function agregarEventosBotones() {
 	});
 }
 
-/**
- * Carga un usuario en el formulario para editarlo
- * @param {string} id - ID del usuario a editar
- */
 function editarUsuario(id) {
 	const usuario = usuarios.find(u => u.id === id);
 
@@ -192,7 +157,6 @@ function editarUsuario(id) {
 		return;
 	}
 
-	// Cargar datos en el formulario
 	document.getElementById('usuarioId').value = usuario.id;
 	document.getElementById('usuarioNombre').value = usuario.nombre;
 	document.getElementById('usuarioApellido').value = usuario.apellido;
@@ -201,21 +165,14 @@ function editarUsuario(id) {
 	document.getElementById('usuarioTipo').value = usuario.tipo;
 	document.getElementById('usuarioEstado').value = usuario.estado;
 
-	// Cambiar botón de guardar a actualizar
 	const btnGuardar = document.getElementById('btnGuardar');
 	btnGuardar.textContent = 'Actualizar';
 
-	// Desabilitar el campo ID (no se puede cambiar)
 	document.getElementById('usuarioId').disabled = true;
 
-	// Scroll al formulario
 	document.querySelector('.card').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-/**
- * Elimina un usuario
- * @param {string} id - ID del usuario a eliminar
- */
 function eliminarUsuario(id) {
 	const usuario = usuarios.find(u => u.id === id);
 
@@ -224,8 +181,7 @@ function eliminarUsuario(id) {
 		return;
 	}
 
-	// Confirmar eliminación
-	if (confirm(`¿Está seguro de que desea eliminar a ${usuario.getNombreCompleto()}?`)) {
+  if (confirm(`¿Está seguro de que desea eliminar a ${usuario.getNombreCompleto()}?`)) {
 		usuarios = usuarios.filter(u => u.id !== id);
 		mostrarTablaUsuarios();
 		actualizarResumen();
@@ -233,9 +189,6 @@ function eliminarUsuario(id) {
 	}
 }
 
-/**
- * Actualiza el resumen de usuarios
- */
 function actualizarResumen() {
 	const resumenDiv = document.getElementById('resumenUsuarios');
 
@@ -250,7 +203,6 @@ function actualizarResumen() {
 		tiposUsuarios[u.tipo] = (tiposUsuarios[u.tipo] || 0) + 1;
 	});
 
-	// Mapeo de plurales
 	const plurales = {
 		'Estudiante': 'Estudiantes',
 		'Profesor': 'Profesores',
@@ -295,12 +247,6 @@ function actualizarResumen() {
 	resumenDiv.innerHTML = html;
 }
 
-/**
- * Muestra una alerta en la pantalla
- * @param {string} titulo - Título de la alerta
- * @param {string} mensaje - Mensaje de la alerta
- * @param {string} tipo - Tipo de alerta (success, danger, warning, info)
- */
 function mostrarAlerta(titulo, mensaje, tipo) {
 	const alertDiv = document.createElement('div');
 	alertDiv.className = `alert alert-${tipo} alert-dismissible fade show`;
@@ -310,19 +256,14 @@ function mostrarAlerta(titulo, mensaje, tipo) {
 		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	`;
 
-	// Insertar alerta al inicio del main
 	const mainElement = document.querySelector('main');
 	mainElement.insertBefore(alertDiv, mainElement.firstChild);
 
-	// Auto-cerrar después de 5 segundos
 	setTimeout(() => {
 		alertDiv.remove();
 	}, 5000);
 }
 
-/**
- * Exporta los usuarios a JSON (para descargar)
- */
 function exportarUsuariosJSON() {
 	const usuariosJSON = JSON.stringify(usuarios.map(u => JSON.parse(u.toJSON())), null, 2);
 	const blob = new Blob([usuariosJSON], { type: 'application/json' });
