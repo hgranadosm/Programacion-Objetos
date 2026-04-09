@@ -1,6 +1,6 @@
 [
   {
-    "id": "U001",
+    "id": "1",
     "nombre": "Juan",
     "apellido": "Pérez",
     "email": "juan.perez@email.com",
@@ -10,7 +10,7 @@
     "fechaRegistro": "2025-01-15T10:30:00.000Z"
   },
   {
-    "id": "U002",
+    "id": "2",
     "nombre": "María",
     "apellido": "García",
     "email": "maria.garcia@email.com",
@@ -20,7 +20,7 @@
     "fechaRegistro": "2025-01-20T14:15:00.000Z"
   },
   {
-    "id": "U003",
+    "id": "3",
     "nombre": "Carlos",
     "apellido": "Rodríguez",
     "email": "carlos.rodriguez@email.com",
@@ -30,7 +30,7 @@
     "fechaRegistro": "2024-12-01T09:00:00.000Z"
   },
   {
-    "id": "U004",
+    "id": "4",
     "nombre": "Ana",
     "apellido": "Martínez",
     "email": "ana.martinez@email.com",
@@ -40,7 +40,7 @@
     "fechaRegistro": "2024-11-20T11:45:00.000Z"
   },
   {
-    "id": "U005",
+    "id": "5",
     "nombre": "Luis",
     "apellido": "González",
     "email": "luis.gonzalez@email.com",
@@ -50,7 +50,7 @@
     "fechaRegistro": "2024-10-15T08:30:00.000Z"
   },
   {
-    "id": "U006",
+    "id": "6",
     "nombre": "Sofia",
     "apellido": "López",
     "email": "sofia.lopez@email.com",
@@ -60,7 +60,7 @@
     "fechaRegistro": "2025-02-01T13:20:00.000Z"
   },
   {
-    "id": "U007",
+    "id": "7",
     "nombre": "David",
     "apellido": "Sanchez",
     "email": "david.sanchez@email.com",
@@ -70,7 +70,7 @@
     "fechaRegistro": "2025-01-10T10:00:00.000Z"
   },
   {
-    "id": "U008",
+    "id": "8",
     "nombre": "Laura",
     "apellido": "Fernández",
     "email": "laura.fernandez@email.com",
@@ -80,7 +80,7 @@
     "fechaRegistro": "2024-09-05T15:30:00.000Z"
   },
   {
-    "id": "U009",
+    "id": "9",
     "nombre": "Miguel",
     "apellido": "Hernández",
     "email": "miguel.hernandez@email.com",
@@ -90,7 +90,7 @@
     "fechaRegistro": "2024-08-20T12:00:00.000Z"
   },
   {
-    "id": "U010",
+    "id": "10",
     "nombre": "Elena",
     "apellido": "Ruiz",
     "email": "elena.ruiz@email.com",

@@ -75,38 +75,75 @@
     </header>
 
     <main class="container">
-      <div class="row mb-3 justify-content-center">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="mb-0 titulo1 text-center">Gestión de Préstamos</h2>
+        </div>
+      </div>
+
+      <div class="row  justify-content-center">
         <div class="col-lg-6 p-5">
           <div class="card">
             <div class="card-header bg-primary text-white">
-              <h5 class="mb-0"><i class="fa-solid fa-book"></i> Registrar Nuevo Préstamo</h5>
+              <h5 class="mb-0">Registrar Nuevo Préstamo</h5>
             </div>
             <div class="card-body">
               <form id="formularioPrestamo">
                 <div class="row">
                   <div class="col-12 mb-3">
-                    <label for="idPrestamo" class="form-label">ID Préstamo</label>
-                    <input type="text" class="form-control" id="idPrestamo" required>
+                    <label for="idPrestamo" class="form-label"
+                      >ID Préstamo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="idPrestamo"
+                      required
+                    />
                   </div>
 
                   <div class="col-12 mb-3">
                     <label for="idUsuario" class="form-label">ID Usuario</label>
-                    <input type="text" class="form-control" id="idUsuario" required>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="idUsuario"
+                      required
+                    />
                   </div>
 
                   <div class="col-12 mb-3">
                     <label for="idLibro" class="form-label">ID Libro</label>
-                    <input type="text" class="form-control" id="idLibro" required>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="idLibro"
+                      required
+                    />
                   </div>
 
                   <div class="col-12 mb-3">
-                    <label for="fechaPrestamo" class="form-label">Fecha Préstamo</label>
-                    <input type="date" class="form-control" id="fechaPrestamo" required>
+                    <label for="fechaPrestamo" class="form-label"
+                      >Fecha Préstamo</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="fechaPrestamo"
+                      required
+                    />
                   </div>
 
                   <div class="col-12 mb-3">
-                    <label for="fechaDevolucion" class="form-label">Fecha Devolución</label>
-                    <input type="date" class="form-control" id="fechaDevolucion" required>
+                    <label for="fechaDevolucion" class="form-label"
+                      >Fecha Devolución</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="fechaDevolucion"
+                      required
+                    />
                   </div>
 
                   <div class="col-12 mb-3">
@@ -120,12 +157,18 @@
 
                   <div class="col-12 mb-3">
                     <label for="multa" class="form-label">Multa (₡)</label>
-                    <input type="number" class="form-control" id="multa" value="0" min="0">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="multa"
+                      value="0"
+                      min="0"
+                    />
                   </div>
 
                   <div class="col-12 d-md-flex justify-content-md-end">
                     <button type="submit" class="btn btn-success">
-                      <i class="fa-solid fa-save"></i> Registrar Préstamo
+                      Registrar Préstamo
                     </button>
                   </div>
                 </div>

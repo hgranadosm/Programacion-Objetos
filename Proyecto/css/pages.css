@@ -228,7 +228,7 @@ body {
 }
 
 .badge-disponible {
-    background: #96be81;
+    background: #90C695 ;
     display: inline-block;
     color: #fff;
     padding: 0.35em 0.9em;
@@ -241,7 +241,7 @@ body {
 }
 
 .badge-detenido {
-    background: #be8881;
+    background: #C99B94;
     text-align: center;
     display: inline-block;
     color: #fff;
