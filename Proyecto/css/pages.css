@@ -60,6 +60,28 @@ body {
     color: #30431D;
 }
 
+.titulo-entrada-prestamos {
+    animation: entradaTituloPrestamos 0.9s ease-out both;
+}
+
+@keyframes entradaTituloPrestamos {
+    0% {
+        opacity: 0;
+        transform: translateY(-28px) scale(0.98);
+        letter-spacing: 0.18em;
+    }
+    65% {
+        opacity: 1;
+        transform: translateY(4px) scale(1.01);
+        letter-spacing: 0.06em;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        letter-spacing: normal;
+    }
+}
+
 .table {
     background: #fff;
     box-shadow: 0 2px 8px #0001;
@@ -394,6 +416,26 @@ body {
 
 .form-control::placeholder {
     color: #d6c5ad;
+}
+
+.mensaje-validacion-form {
+    color: #ab2b2b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-height: 1.2rem;
+}
+
+.mensaje-validacion-campo {
+    color: #ab2b2b;
+    font-size: 0.88rem;
+    margin-top: 0.35rem;
+    min-height: 1.1rem;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #ab2b2b;
+    box-shadow: 0 0 0 0.2rem rgba(171, 43, 43, 0.1);
 }
 
 .btn-success {

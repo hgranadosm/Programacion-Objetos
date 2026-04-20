@@ -77,7 +77,7 @@
     <main class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="mb-0 titulo1 text-center">Gestión de Préstamos</h2>
+          <h2 class="mb-0 titulo1 text-center titulo-entrada-prestamos">Gestión de Préstamos</h2>
         </div>
       </div>
 
@@ -88,18 +88,10 @@
               <h5 class="mb-0">Registrar Nuevo Préstamo</h5>
             </div>
             <div class="card-body">
-              <form id="formularioPrestamo">
+              <form id="formularioPrestamo" novalidate>
                 <div class="row">
-                  <div class="col-12 mb-3">
-                    <label for="idPrestamo" class="form-label"
-                      >Préstamo</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="idPrestamo"
-                      required
-                    />
+                  <div class="col-12 mb-2">
+                    <div id="mensajeValidacionPrestamo" class="mensaje-validacion-form" role="alert"></div>
                   </div>
 
                   <div class="col-12 mb-3">
@@ -108,8 +100,8 @@
                       type="text"
                       class="form-control"
                       id="idUsuario"
-                      required
                     />
+                    <div id="error-idUsuario" class="mensaje-validacion-campo"></div>
                   </div>
 
                   <div class="col-12 mb-3">
@@ -118,8 +110,8 @@
                       type="text"
                       class="form-control"
                       id="idLibro"
-                      required
                     />
+                    <div id="error-idLibro" class="mensaje-validacion-campo"></div>
                   </div>
 
                   <div class="col-12 mb-3">
@@ -130,8 +122,8 @@
                       type="date"
                       class="form-control"
                       id="fechaPrestamo"
-                      required
                     />
+                    <div id="error-fechaPrestamo" class="mensaje-validacion-campo"></div>
                   </div>
 
                   <div class="col-12 mb-3">
@@ -142,17 +134,18 @@
                       type="date"
                       class="form-control"
                       id="fechaDevolucion"
-                      required
                     />
+                    <div id="error-fechaDevolucion" class="mensaje-validacion-campo"></div>
                   </div>
 
                   <div class="col-12 mb-3">
                     <label for="estado" class="form-label">Estado</label>
-                    <select class="form-select" id="estado" required>
+                    <select class="form-select" id="estado">
                       <option value="Activo">Activo</option>
                       <option value="Devuelto">Devuelto</option>
                       <option value="Atrasado">Atrasado</option>
                     </select>
+                    <div id="error-estado" class="mensaje-validacion-campo"></div>
                   </div>
 
                   <div class="col-12 mb-3">
@@ -162,12 +155,15 @@
                       class="form-control"
                       id="multa"
                       value="0"
-                      min="0"
                     />
+                    <div id="error-multa" class="mensaje-validacion-campo"></div>
                   </div>
 
-                  <div class="col-12 d-md-flex justify-content-md-end">
-                    <button type="submit" class="btn btn-success">
+                  <div class="col-12 d-md-flex justify-content-md-end gap-2">
+                    <button type="button" class="btn btn-secondary" id="btnLimpiarPrestamo" style="display:none">
+                      Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-success" id="btnRegistrarPrestamo">
                       Registrar Préstamo
                     </button>
                   </div>
@@ -193,6 +189,7 @@
               <th>Fecha Devolución</th>
               <th>Estado</th>
               <th>Multa</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody></tbody>
