@@ -72,6 +72,50 @@ body {
     animation: entradaTituloDevoluciones 0.85s ease-in-out both;
 }
 
+.titulo-entrada-libros {
+    animation: entradaTituloLibros 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes entradaTituloLibros {
+    0% {
+        opacity: 0;
+        transform: scaleX(0.6) scaleY(0.85);
+        transform-origin: left center;
+    }
+    70% {
+        opacity: 1;
+        transform: scaleX(1.04) scaleY(1.01);
+        transform-origin: left center;
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+        transform-origin: left center;
+    }
+}
+
+.titulo-entrada-usuarios {
+    animation: entradaTituloUsuarios 0.8s ease-out both;
+}
+
+@keyframes entradaTituloUsuarios {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+        letter-spacing: 0.25em;
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(-4px);
+        letter-spacing: 0.04em;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        letter-spacing: normal;
+    }
+}
+
 @keyframes entradaTituloDevoluciones {
     0% {
         opacity: 0;
