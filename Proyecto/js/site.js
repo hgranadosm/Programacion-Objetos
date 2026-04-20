@@ -37,6 +37,45 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 	}
 
+	const tablaDevoluciones = document.getElementById('tablaDevoluciones');
+	if (tablaDevoluciones) {
+		fetch('../data/listadevoluciones.json')
+			.then(response => {
+				if (!response.ok) throw new Error('No se pudo cargar el archivo JSON de devoluciones');
+				return response.json();
+			})
+			.then(data => {
+				const tbody = tablaDevoluciones.querySelector('tbody');
+				tbody.innerHTML = '';
+				data.forEach((d, idx) => {
+					const fila = document.createElement('tr');
+					let estado = '';
+					if (d.estado === 'Completada') {
+						estado = '<span class="badge bg-success">Completada</span>';
+					} else if (d.estado === 'Pendiente') {
+						estado = '<span class="badge bg-secondary">Pendiente</span>';
+					} else if (d.estado === 'Con multa') {
+						estado = '<span class="badge bg-danger">Con multa</span>';
+					}
+					fila.innerHTML = `
+						<td class="id-cell">${idx + 1}</td>
+						<td>${d.usuario || ''}</td>
+						<td>${d.libro || ''}</td>
+						<td>${d.fechaPrestamo || ''}</td>
+						<td>${d.fechaDevolucion || ''}</td>
+						<td>${d.fechaDevolucionReal || ''}</td>
+						<td>${estado}</td>
+						<td>₡${d.multa ?? '0'}</td>
+					`;
+					tbody.appendChild(fila);
+				});
+			})
+			.catch(error => {
+				const tbody = tablaDevoluciones.querySelector('tbody');
+				tbody.innerHTML = `<tr><td colspan="8" class="text-danger">Error: ${error.message}</td></tr>`;
+			});
+	}
+
 	const tablaBibliotecarios = document.getElementById('tablaBibliotecarios');
 	if (tablaBibliotecarios) {
 		fetch('../data/listabibliotecarios.json')

@@ -68,6 +68,25 @@ body {
     animation: entradaTituloBibliotecarios 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.titulo-entrada-devoluciones {
+    animation: entradaTituloDevoluciones 0.85s ease-in-out both;
+}
+
+@keyframes entradaTituloDevoluciones {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) rotate(-2deg);
+    }
+    55% {
+        opacity: 1;
+        transform: translateY(-5px) rotate(0.5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
 @keyframes entradaTituloBibliotecarios {
     0% {
         opacity: 0;

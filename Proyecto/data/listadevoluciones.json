@@ -1,0 +1,110 @@
+[
+	{
+		"usuario": "Juan Pérez",
+		"libro": "Cien años de soledad",
+		"fechaPrestamo": "2026-02-20",
+		"fechaDevolucion": "2026-03-01",
+		"fechaDevolucionReal": "2026-03-01",
+		"estado": "Completada",
+		"multa": 0
+	},
+	{
+		"usuario": "Carlos Ruiz",
+		"libro": "Don Quijote de la Mancha",
+		"fechaPrestamo": "2026-02-15",
+		"fechaDevolucion": "2026-02-28",
+		"fechaDevolucionReal": "2026-03-05",
+		"estado": "Con multa",
+		"multa": 1500
+	},
+	{
+		"usuario": "Sofía Vargas",
+		"libro": "Crónica de una muerte anunciada",
+		"fechaPrestamo": "2026-02-01",
+		"fechaDevolucion": "2026-02-15",
+		"fechaDevolucionReal": "2026-02-20",
+		"estado": "Con multa",
+		"multa": 2000
+	},
+	{
+		"usuario": "Lucía Herrera",
+		"libro": "Ficciones",
+		"fechaPrestamo": "2026-02-22",
+		"fechaDevolucion": "2026-03-06",
+		"fechaDevolucionReal": "2026-03-06",
+		"estado": "Completada",
+		"multa": 0
+	},
+	{
+		"usuario": "Luis Castro",
+		"libro": "La sombra del viento",
+		"fechaPrestamo": "2026-02-10",
+		"fechaDevolucion": "2026-02-20",
+		"fechaDevolucionReal": "2026-02-20",
+		"estado": "Completada",
+		"multa": 0
+	},
+	{
+		"usuario": "Andrés Molina",
+		"libro": "1984",
+		"fechaPrestamo": "2026-01-10",
+		"fechaDevolucion": "2026-01-25",
+		"fechaDevolucionReal": "2026-01-30",
+		"estado": "Con multa",
+		"multa": 750
+	},
+	{
+		"usuario": "Valeria Cordero",
+		"libro": "Orgullo y prejuicio",
+		"fechaPrestamo": "2026-01-15",
+		"fechaDevolucion": "2026-01-29",
+		"fechaDevolucionReal": "2026-01-29",
+		"estado": "Completada",
+		"multa": 0
+	},
+	{
+		"usuario": "Gabriela Solís",
+		"libro": "El alquimista",
+		"fechaPrestamo": "2026-01-20",
+		"fechaDevolucion": "2026-02-03",
+		"fechaDevolucionReal": "",
+		"estado": "Pendiente",
+		"multa": 0
+	},
+	{
+		"usuario": "Mauricio Vega",
+		"libro": "Siddhartha",
+		"fechaPrestamo": "2026-02-05",
+		"fechaDevolucion": "2026-02-19",
+		"fechaDevolucionReal": "2026-02-22",
+		"estado": "Con multa",
+		"multa": 500
+	},
+	{
+		"usuario": "Carolina Rojas",
+		"libro": "La odisea",
+		"fechaPrestamo": "2026-02-08",
+		"fechaDevolucion": "2026-02-22",
+		"fechaDevolucionReal": "2026-02-22",
+		"estado": "Completada",
+		"multa": 0
+	},
+	{
+		"usuario": "Jorge Salazar",
+		"libro": "La metamorfosis",
+		"fechaPrestamo": "2026-01-05",
+		"fechaDevolucion": "2026-01-19",
+		"fechaDevolucionReal": "2026-01-19",
+		"estado": "Completada",
+		"multa": 0
+	},
+	{
+		"usuario": "Paola Chaves",
+		"libro": "El túnel",
+		"fechaPrestamo": "2026-01-12",
+		"fechaDevolucion": "2026-01-26",
+		"fechaDevolucionReal": "",
+		"estado": "Pendiente",
+		"multa": 0
+	}
+]
