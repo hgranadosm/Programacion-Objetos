@@ -14,12 +14,12 @@
     "id": "3",
     "usuario": "Carlos Ruiz",
     "libro": "Don Quijote de la Mancha",
-    "usuarioId": "3",
-    "libroId": "3",
+    "usuarioId": "Carlos Ruiz",
+    "libroId": "Don Quijote de la Mancha",
     "fechaPrestamo": "2026-02-15",
     "fechaDevolucion": "2026-02-28",
-    "estado": "Atrasado",
-    "multa": 1500
+    "estado": "Devuelto",
+    "multa": 0
   },
   {
     "id": "4",
