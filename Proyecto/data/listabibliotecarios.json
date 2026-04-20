@@ -1,0 +1,92 @@
+[
+	{
+		"nombre": "Elena",
+		"apellido": "Montoya",
+		"email": "e.montoya@bibliotecaatlas.com",
+		"telefono": "2711-1001",
+		"turno": "Mañana",
+		"especialidad": "Catalogación",
+		"estado": "Activo"
+	},
+	{
+		"nombre": "Roberto",
+		"apellido": "Salas",
+		"email": "r.salas@bibliotecaatlas.com",
+		"telefono": "2711-1002",
+		"turno": "Tarde",
+		"especialidad": "Préstamos",
+		"estado": "Activo"
+	},
+	{
+		"nombre": "Daniela",
+		"apellido": "Quirós",
+		"email": "d.quiros@bibliotecaatlas.com",
+		"telefono": "2711-1003",
+		"turno": "Mañana",
+		"especialidad": "Archivo",
+		"estado": "Activo"
+	},
+	{
+		"nombre": "Fernando",
+		"apellido": "Arias",
+		"email": "f.arias@bibliotecaatlas.com",
+		"telefono": "2711-1004",
+		"turno": "Noche",
+		"especialidad": "Referencia",
+		"estado": "Inactivo"
+	},
+	{
+		"nombre": "Marcela",
+		"apellido": "Vindas",
+		"email": "m.vindas@bibliotecaatlas.com",
+		"telefono": "2711-1005",
+		"turno": "Tarde",
+		"especialidad": "Catalogación",
+		"estado": "Activo"
+	},
+	{
+		"nombre": "Andrés",
+		"apellido": "Portuguez",
+		"email": "a.portuguez@bibliotecaatlas.com",
+		"telefono": "2711-1006",
+		"turno": "Mañana",
+		"especialidad": "Préstamos",
+		"estado": "Activo"
+	},
+	{
+		"nombre": "Silvia",
+		"apellido": "Benavides",
+		"email": "s.benavides@bibliotecaatlas.com",
+		"telefono": "2711-1007",
+		"turno": "Tarde",
+		"especialidad": "Adquisiciones",
+		"estado": "Activo"
+	},
+	{
+		"nombre": "Mario",
+		"apellido": "Espinoza",
+		"email": "m.espinoza@bibliotecaatlas.com",
+		"telefono": "2711-1008",
+		"turno": "Noche",
+		"especialidad": "Archivo",
+		"estado": "Inactivo"
+	},
+	{
+		"nombre": "Karla",
+		"apellido": "Alvarado",
+		"email": "k.alvarado@bibliotecaatlas.com",
+		"telefono": "2711-1009",
+		"turno": "Mañana",
+		"especialidad": "Referencia",
+		"estado": "Activo"
+	},
+	{
+		"nombre": "José",
+		"apellido": "Morales",
+		"email": "j.morales@bibliotecaatlas.com",
+		"telefono": "2711-1010",
+		"turno": "Tarde",
+		"especialidad": "Adquisiciones",
+		"estado": "Activo"
+	}
+]

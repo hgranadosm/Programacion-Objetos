@@ -64,6 +64,28 @@ body {
     animation: entradaTituloPrestamos 0.9s ease-out both;
 }
 
+.titulo-entrada-bibliotecarios {
+    animation: entradaTituloBibliotecarios 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes entradaTituloBibliotecarios {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+        filter: blur(4px);
+    }
+    60% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(6px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
 @keyframes entradaTituloPrestamos {
     0% {
         opacity: 0;

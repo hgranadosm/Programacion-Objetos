@@ -37,6 +37,43 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 	}
 
+	const tablaBibliotecarios = document.getElementById('tablaBibliotecarios');
+	if (tablaBibliotecarios) {
+		fetch('../data/listabibliotecarios.json')
+			.then(response => {
+				if (!response.ok) throw new Error('No se pudo cargar el archivo JSON de bibliotecarios');
+				return response.json();
+			})
+			.then(data => {
+				const tbody = tablaBibliotecarios.querySelector('tbody');
+				tbody.innerHTML = '';
+				data.forEach((b, idx) => {
+					const fila = document.createElement('tr');
+					let estado = '';
+					if (b.estado === 'Activo') {
+						estado = '<span class="badge-disponible">Activo</span>';
+					} else {
+						estado = '<span class="badge-detenido">Inactivo</span>';
+					}
+					fila.innerHTML = `
+						<td class="id-cell">${idx + 1}</td>
+						<td>${b.nombre || ''}</td>
+						<td>${b.apellido || ''}</td>
+						<td>${b.email || ''}</td>
+						<td>${b.telefono || '-'}</td>
+						<td>${b.turno || ''}</td>
+						<td>${b.especialidad || ''}</td>
+						<td>${estado}</td>
+					`;
+					tbody.appendChild(fila);
+				});
+			})
+			.catch(error => {
+				const tbody = tablaBibliotecarios.querySelector('tbody');
+				tbody.innerHTML = `<tr><td colspan="8" class="text-danger">Error: ${error.message}</td></tr>`;
+			});
+	}
+
 	const tablaPrestamos = document.getElementById('tablaPrestamos');
 	if (tablaPrestamos) {
 		fetch('../data/listaprestamos.json')
