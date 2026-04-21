@@ -17,10 +17,6 @@ class Usuario {
 	validar() {
 		const errores = [];
 
-		if (!this.id || this.id.trim() === '') {
-			errores.push('El ID es obligatorio');
-		}
-
 		if (!this.nombre || this.nombre.trim() === '') {
 			errores.push('El nombre es obligatorio');
 		}

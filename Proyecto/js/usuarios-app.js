@@ -1,4 +1,10 @@
 let usuarios = [];
+let _idEdicionUsuario = null;
+
+function generarIdUsuario() {
+	const maxId = usuarios.reduce((max, u) => Math.max(max, Number(u.id) || 0), 0);
+	return String(maxId + 1);
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 	cargarUsuarios();
@@ -52,18 +58,20 @@ function inicializarFormulario() {
 	btnLimpiar.addEventListener('click', function () {
 		formulario.reset();
 		btnGuardar.textContent = 'Guardar';
-		document.getElementById('usuarioId').disabled = false;
+		_idEdicionUsuario = null;
 	});
 }
 
 function guardarUsuario() {
-	const id = document.getElementById('usuarioId').value.trim();
 	const nombre = document.getElementById('usuarioNombre').value.trim();
 	const apellido = document.getElementById('usuarioApellido').value.trim();
 	const email = document.getElementById('usuarioEmail').value.trim();
 	const telefono = document.getElementById('usuarioTelefono').value.trim();
 	const tipo = document.getElementById('usuarioTipo').value;
 	const estado = document.getElementById('usuarioEstado').value;
+
+	const esEdicion = _idEdicionUsuario !== null;
+	const id = esEdicion ? _idEdicionUsuario : generarIdUsuario();
 
 	const nuevoUsuario = new Usuario(id, nombre, apellido, email, telefono, tipo, estado);
 
@@ -93,7 +101,7 @@ function guardarUsuario() {
 	actualizarResumen();
 	document.getElementById('formularioUsuario').reset();
 	document.getElementById('btnGuardar').textContent = 'Guardar';
-	document.getElementById('usuarioId').disabled = false;
+	_idEdicionUsuario = null;
 }
 
 function mostrarTablaUsuarios() {
@@ -157,7 +165,8 @@ function editarUsuario(id) {
 		return;
 	}
 
-	document.getElementById('usuarioId').value = usuario.id;
+	_idEdicionUsuario = usuario.id;
+
 	document.getElementById('usuarioNombre').value = usuario.nombre;
 	document.getElementById('usuarioApellido').value = usuario.apellido;
 	document.getElementById('usuarioEmail').value = usuario.email;
@@ -167,8 +176,6 @@ function editarUsuario(id) {
 
 	const btnGuardar = document.getElementById('btnGuardar');
 	btnGuardar.textContent = 'Actualizar';
-
-	document.getElementById('usuarioId').disabled = true;
 
 	document.querySelector('.card').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }

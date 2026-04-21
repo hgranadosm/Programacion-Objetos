@@ -548,5 +548,49 @@
     "fechaDevolucion": "2026-04-27",
     "estado": "Devuelto",
     "multa": 0
+  },
+  {
+    "id": "52",
+    "usuario": "Byron Granados",
+    "libro": "Los juegos del hambre",
+    "usuarioId": "Byron Granados",
+    "libroId": "Los juegos del hambre",
+    "fechaPrestamo": "2026-04-20",
+    "fechaDevolucion": "2026-04-20",
+    "estado": "Activo",
+    "multa": 0
+  },
+  {
+    "id": "53",
+    "usuario": "Wendy Mora",
+    "libro": "La bella y la bestia",
+    "usuarioId": "Wendy Mora",
+    "libroId": "La bella y la bestia",
+    "fechaPrestamo": "2026-04-20",
+    "fechaDevolucion": "2026-04-21",
+    "estado": "Activo",
+    "multa": 0
+  },
+  {
+    "id": "54",
+    "usuario": "Sofia Varela",
+    "libro": "Pinocho",
+    "usuarioId": "Sofia Varela",
+    "libroId": "Pinocho",
+    "fechaPrestamo": "2026-04-20",
+    "fechaDevolucion": "2026-04-25",
+    "estado": "Activo",
+    "multa": 0
+  },
+  {
+    "id": "55",
+    "usuario": "Juan Pérez",
+    "libro": "Harry Potter",
+    "usuarioId": "Juan Pérez",
+    "libroId": "Harry Potter",
+    "fechaPrestamo": "2026-04-20",
+    "fechaDevolucion": "2026-04-23",
+    "estado": "Activo",
+    "multa": 0
   }
 ]
